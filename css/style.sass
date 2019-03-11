@@ -36,6 +36,24 @@ $main_color: #ac8b10
     100%
         opacity: 1
 
+@keyframes lang_on
+    0%
+        color: black
+    100%
+        color: $main_color
+
+@keyframes lang_on_hobby
+    0%
+        color: #5f91fb
+    100%
+        color: black
+
+@keyframes lang_on_title
+    0%
+        color: #271e00
+    100%
+        color: #ffdd5b
+
 @mixin activated
     animation-name: activated
     animation-duration: 1.1s
@@ -160,6 +178,10 @@ body
 .active
     @include card
 
+.active_select
+    @include activ_ss
+    background-color: #fcef9c 
+
 .hidden
     display: none
 
@@ -224,9 +246,6 @@ body
 .lng_opt-menu,
 .lng_opt-about
     display: none
-
-.active
-    display: block
 
 .box_info
     margin-top: 151px
@@ -377,3 +396,20 @@ body
     background-color: #5f91fb
     border-bottom: none
     border-radius: 23%
+
+// -----------------#### Active class to languages ####--------------//
+.active_lng
+    display: block
+    animation-name: lang_on
+    animation-duration: 1.5s
+
+.active_hobby
+    display: block
+    animation-name: lang_on_hobby
+    animation-duration: 1.5s
+
+.active_title
+    display: block
+    animation-name: lang_on_title
+    animation-duration: 1.5s
+//-------------------#### END ####------------------//
