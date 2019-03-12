@@ -5,6 +5,7 @@ export default function lang (){
         hobbyMain = document.querySelectorAll('.hobby_main'),
         techMain = document.querySelectorAll('.tech_main'),
         contMain = document.querySelectorAll('.cont_main'),
+        mainText = document.querySelectorAll('.lng_opt-info_text'),
         portfBx = document.querySelectorAll('.portf-bx '),
         titleAbout = document.querySelectorAll('.lng_opt-about'),
         backBx = document.querySelectorAll('.back-bx'),
@@ -40,6 +41,10 @@ export default function lang (){
             langActive(k, hobbyMain, 'active_lng');
             langActive(k, techMain, 'active_lng');
             langActive(k, contMain, 'active_lng');
+
+            //Main page text
+            langNonActive(0, mainText, 'active_lng');
+            langActive(k, mainText, 'active_lng');
 
             //About languages
             langNonActive(0, backBx, 'active_lng');

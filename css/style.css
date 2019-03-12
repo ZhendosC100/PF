@@ -382,7 +382,10 @@ body {
 }
 
 .lng_opt-menu,
-.lng_opt-about {
+.lng_opt-about,
+.lng_opt-portf,
+.lng_opt-info_text,
+.lng_opt-about_text {
   display: none;
 }
 
@@ -442,9 +445,21 @@ body {
   width: 100%;
 }
 
-.info_text {
-  width: 60%;
+.lng_opt-info_text,
+.lng_opt-about_text {
+  width: 67%;
+  font-size: 24px;
   z-index: 2;
+  margin-left: 7%;
+}
+
+.name_line {
+  font-size: 25px;
+}
+
+.name {
+  font-size: 34px;
+  color: #fbe79d;
 }
 
 .social {
@@ -596,6 +611,73 @@ body {
   background: url(../img/hobby.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hobby_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 98px;
+}
+
+.hobby_info-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hobby_info-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  z-index: 3;
+  margin-left: -3%;
+}
+
+.hobby_info-slider {
+  width: 30%;
+}
+
+.lng-opt_hobby {
+  width: 74%;
+  height: 100%;
+  color: #101000;
+  padding: 25px;
+  border: 2px solid #fcef9c;
+  border-radius: 10%;
+  background-color: rgba(255, 255, 255, 0.69);
+  -webkit-box-shadow: 12px 13px 34px 7px rgba(65, 64, 64, 0.9);
+          box-shadow: 12px 13px 34px 7px rgba(65, 64, 64, 0.9);
+}
+
+.img-hobby {
+  width: 356px;
+  border: 4px solid #e6c751;
+  border-radius: 26%;
+  -webkit-box-shadow: 10px 11px 44px 10px #272201;
+          box-shadow: 10px 11px 44px 10px #272201;
+  margin-left: 5%;
 }
 
 .light_hobby {
