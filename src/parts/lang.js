@@ -8,7 +8,10 @@ export default function lang (){
         mainText = document.querySelectorAll('.lng_opt-info_text'),
         portfBx = document.querySelectorAll('.portf-bx '),
         titleAbout = document.querySelectorAll('.lng_opt-about'),
+        titlePortf = document.querySelectorAll('.lng_opt-portf'),
+        titleHobby = document.querySelectorAll('.lng_opt-hobby'),
         backBx = document.querySelectorAll('.back-bx'),
+        description = document.querySelectorAll('.lng_opt-about_descr'),
         hobbyBx = document.querySelectorAll('.hobby_bx');
 
         
@@ -49,19 +52,25 @@ export default function lang (){
             //About languages
             langNonActive(0, backBx, 'active_lng');
             langNonActive(0, titleAbout, 'active_title');
+            langNonActive(0, description, 'active_lng');
 
             langActive(k, backBx, 'active_lng');
             langActive(k, titleAbout, 'active_title');
+            langActive(k, description, 'active_lng');
 
             //Portfolio languages
             langNonActive(0, portfBx, 'active_lng');
+            langNonActive(0, titlePortf, 'active_title');
             
             langActive(k, portfBx, 'active_lng');
+            langActive(k, titlePortf, 'active_title');
 
             //Hobby languages
             langNonActive(0, hobbyBx, 'active_hobby');
+            langNonActive(0, titleHobby, 'active_title-hobby');
 
             langActive(k, hobbyBx, 'active_hobby');
+            langActive(k, titleHobby, 'active_title-hobby');
         });
     }
 }

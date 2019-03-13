@@ -20,7 +20,8 @@ export default function anim (){
     let	boxPf = document.querySelector('.box_pf'),
         boxPortfolio = document.querySelector('.box_portfolio'),
         btnOn = document.querySelector('.portfol'),
-        btnOff = document.querySelector('.main_portf');
+        btnOff = document.querySelector('.main_portf'),
+        titlePortf = document.querySelectorAll('.title_portf');  //to displayed title of Portfolio & Hobby boxes
 
 
     function hidden (item, b){
@@ -39,23 +40,33 @@ export default function anim (){
         hidden(boxPf, boxPortfolio);
     }
 
-    // function portfHidden (){
-    //     box_pf.style.display = 'none';
-    //     box_portfolio.classList.remove('portf_off');
-    // }
 
     function portfOn (){
         // box_portfolio.classList.remove('portf_on');
         displayOn(boxPortfolio);
     }
 
+    function titleHidden (){                            // Hide title of portfolio & hobby boxes
+        for (let i=0; i < titlePortf.length; i++) {
+            titlePortf[i].style.display = 'none';
+        }
+    }
+
+    function titleDisplay (){                            // Display title of portfolio & hobby boxes
+        for (let i=0; i < titlePortf.length; i++) {
+            titlePortf[i].style.display = 'block';
+        }
+    }
+
     btnOff.addEventListener('click', () =>{
+        titleHidden();
         boxPortfolio.classList.add('portf_off');
         setTimeout(portfHidden, 1200);
     });
 
     btnOn.addEventListener('click', ()=> {
         boxPf.style.display = 'block';
+        titleDisplay();
         boxPortfolio.classList.add('portf_on');
         setTimeout(portfOn, 1400);
     });
@@ -68,7 +79,7 @@ export default function anim (){
         btnOffHb = document.querySelector('.main_hobby');
 
     function hobbyOn (){
-        // box_portfolio.classList.remove('portf_on');
+        boxHobby.classList.remove('portf_on');
         displayOn(boxHobby);
     }
 
@@ -79,11 +90,13 @@ export default function anim (){
     btnOnHb.addEventListener('click', ()=> {
         boxHb.style.display = 'block';
         boxHobby.classList.add('portf_on');
+        titleDisplay();
         setTimeout(hobbyOn, 1400);
     });
 
     btnOffHb.addEventListener('click', () =>{
         boxHobby.classList.add('portf_off');
+        titleHidden();
         setTimeout(hobbyHidden, 1200);
     });
 }

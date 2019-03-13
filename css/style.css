@@ -124,6 +124,24 @@
   }
 }
 
+@-webkit-keyframes lang_title_hobby {
+  0% {
+    color: #7ca6fd;
+  }
+  100% {
+    color: #030229;
+  }
+}
+
+@keyframes lang_title_hobby {
+  0% {
+    color: #7ca6fd;
+  }
+  100% {
+    color: #030229;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -384,8 +402,10 @@ body {
 .lng_opt-menu,
 .lng_opt-about,
 .lng_opt-portf,
+.lng_opt-hobby,
 .lng_opt-info_text,
-.lng_opt-about_text {
+.lng_opt-about_text,
+.lng_opt-about_descr {
   display: none;
 }
 
@@ -519,7 +539,8 @@ body {
   height: 78px;
 }
 
-.title_about {
+.title_about,
+.title_portf {
   color: #ffdd5b;
   font-family: "MEL_ital";
   position: absolute;
@@ -544,7 +565,7 @@ body {
 .about_photo {
   position: absolute;
   top: -93px;
-  left: 54%;
+  left: 62%;
   width: 342px;
 }
 
@@ -555,6 +576,14 @@ body {
 
 .lng_m {
   color: #d4ae1f;
+}
+
+.lng_opt-about_descr {
+  width: 100%;
+  font-size: 23px;
+  text-align: left;
+  margin-left: 7%;
+  line-height: 1.9;
 }
 
 .portf_on {
@@ -588,6 +617,15 @@ body {
   background-image: radial-gradient(closest-side at 64% 18%, #7f6505, #0d0b01 151%);
 }
 
+.title_portf {
+  display: none;
+  width: 20%;
+  text-align: center;
+  top: 22px;
+  left: 38%;
+  z-index: 3;
+}
+
 .screen {
   color: rgba(85, 85, 85, 0.2);
   position: absolute;
@@ -611,6 +649,10 @@ body {
   background: url(../img/hobby.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.lng_opt-hobby {
+  color: #030229;
 }
 
 .hobby_info {
@@ -720,5 +762,13 @@ body {
           animation-name: lang_on_title;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
+}
+
+.active_title-hobby {
+  display: block;
+  -webkit-animation-name: lang_title_hobby;
+          animation-name: lang_title_hobby;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
 }
 /*# sourceMappingURL=style.css.map */
