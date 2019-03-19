@@ -12,7 +12,9 @@ export default function lang (){
         titleHobby = document.querySelectorAll('.lng_opt-hobby'),
         backBx = document.querySelectorAll('.back-bx'),
         description = document.querySelectorAll('.lng_opt-about_descr'),
-        hobbyBx = document.querySelectorAll('.hobby_bx');
+        hobbyBx = document.querySelectorAll('.hobby_bx'),
+        techBox = document.querySelectorAll('.lng_opt-stack'),
+        contactBox = document.querySelectorAll('.lng_opt-cont');
 
         
         let langNonActive = (b, name_box, z) =>{
@@ -71,6 +73,14 @@ export default function lang (){
 
             langActive(k, hobbyBx, 'active_hobby');
             langActive(k, titleHobby, 'active_title-hobby');
+
+            //Technologies languages
+            langNonActive(0, techBox, 'active_popup');
+            langActive(k, techBox, 'active_popup');
+
+            //Contact languages
+            langNonActive(0, contactBox, 'active_popup');
+            langActive(k, contactBox, 'active_popup');
         });
     }
 }

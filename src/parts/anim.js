@@ -99,4 +99,73 @@ export default function anim (){
         titleHidden();
         setTimeout(hobbyHidden, 1200);
     });
+
+    //Technologies box
+
+    let btnOnTech = document.querySelector('.tech'),
+        closeAside = document.querySelector('.close'),
+        popupBackdrop = document.querySelector('.popup_backdrop'),
+        popupTech = document.querySelector('.popup_tech');
+
+        function hidePopup(){
+            popupTech.classList.remove('portf_on');
+            // item.classList.remove('portf_on');
+            popupTech.style.display = 'none';
+            // item.style.display = 'none';
+        }
+
+        function hideBackdrop(){
+            popupBackdrop.classList.remove('active_backdrop');
+        }
+
+        function displayPopup(item){
+            // popupTech.classList.add('portf_on');
+            item.classList.add('portf_on');
+            // popupTech.style.display = 'flex';
+            item.style.display = 'flex';
+        }
+
+        btnOnTech.addEventListener('click', () => {
+                popupBackdrop.classList.remove('non_active_backdrop');
+                popupBackdrop.classList.add('active_backdrop');
+                displayPopup(popupTech);
+            
+        });
+
+        
+        closeAside.addEventListener('click', () =>{
+            popupBackdrop.classList.add('non_active_backdrop');
+            // hidePopup();
+            setTimeout(hidePopup, 750);
+            setTimeout(hideBackdrop, 1300);
+        });
+        
+        //Contact box
+
+        let btnOnCont = document.querySelector('.cont'),
+            closeCont = document.querySelector('.close-contact'),
+            popupContact = document.querySelector('.popup_contact');
+
+        function hidePopupCont(){
+            popupContact.classList.remove('portf_on');
+            // item.classList.remove('portf_on');
+            popupContact.style.display = 'none';
+            // item.style.display = 'none';
+        }
+
+        btnOnCont.addEventListener('click', (e) => {
+            let target = e.target;
+            popupBackdrop.classList.remove('non_active_backdrop');
+            popupBackdrop.classList.add('active_backdrop');
+            displayPopup(popupContact);
+            console.log(target);
+        });
+
+        closeCont.addEventListener('click', () =>{
+            popupBackdrop.classList.add('non_active_backdrop');
+            // hidePopup();
+            setTimeout(hidePopupCont, 750);
+            setTimeout(hideBackdrop, 1300);
+        });
+
 }

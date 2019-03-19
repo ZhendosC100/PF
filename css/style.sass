@@ -36,6 +36,18 @@ $main_color: #ac8b10
     100%
         opacity: 1
 
+@keyframes popup_backdrop_on
+    0%
+        opacity: 0
+    100%
+        opacity: 0.6
+
+@keyframes popup_backdrop_off
+    0%
+        opacity: 0.6
+    100%
+        opacity: 0
+
 @keyframes lang_on
     0%
         color: black
@@ -255,7 +267,9 @@ body
 .lng_opt-hobby,
 .lng_opt-info_text,
 .lng_opt-about_text,
-.lng_opt-about_descr
+.lng_opt-about_descr,
+.lng_opt-cont,
+.lng_opt-stack
     display: none
 
 .box_info
@@ -471,6 +485,85 @@ body
     border-bottom: none
     border-radius: 23%
 
+// -----------------#### Popup Techologies ####----------------------//
+
+.light_popup
+    position: absolute
+    left: 43%
+    top: 25px
+    width: 60px
+    height: 60px
+    border-radius: 50%
+    background-image: radial-gradient(closest-side at 25% 18%, #d1a80e, #453807 237%)
+    box-shadow: 3px 9px 32px 7px #78610e
+
+.popup_backdrop
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    opacity: 0.6
+    background-color: black
+
+.popup_tech,
+.popup_contact
+    display: none
+    position: absolute
+    // display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100%
+
+.popup_tech-info,
+.popup_contact-info
+    @include elem_dir
+    position: relative
+    width: 400px
+    height: 550px
+    border-radius: 11%
+    border: 2px solid rgba(135, 132, 132, 0.9)
+    background-image: linear-gradient(150deg, #7f6505, #161102 70%)
+    box-shadow: 6px 7px 34px 7px rgba(92, 92, 91, 0.9)
+
+.tech-text
+    width: 86%
+    text-align: center
+    color: rgba(255, 255, 255, 0.69)
+    font-family: "RobotoMTh"
+    font-size: 24px
+    font-weight: 900
+
+.lng_opt-stack
+    display: none
+    font-size: 30px
+    color: #fbf9f5
+    margin: 16px
+
+.close,
+.close-contact
+    position: absolute
+    top: 17px
+    right: 13px
+    height: 30px
+    &:hover
+        cursor: pointer
+
+// -----------------#### Popup contact ####-------------------------//
+
+.popup_contact-info
+    text-align: center
+    flex-direction: column
+    font-size: 30px
+    color: wheat
+//     @include elem_dir
+//     position: relative
+//     width: 200px
+//     height: 200px
+//     background-color: green
+
 // -----------------#### Active class to languages ####--------------//
 .active_lng
     display: block
@@ -487,8 +580,24 @@ body
     animation-name: lang_on_title
     animation-duration: 1.5s
 
+.active_popup
+    display: block
+    animation-name: portf_on
+    animation-duration: 1.5s
+
 .active_title-hobby
     display: block
     animation-name: lang_title_hobby
     animation-duration: 2.5s
+
 //-------------------#### END ####------------------//
+
+.active_backdrop
+    display: block
+    animation-name: popup_backdrop_on
+    animation-duration: 1.5s
+
+.non_active_backdrop
+    animation-name: popup_backdrop_off
+    animation-duration: 1.5s
+    opacity: 0
