@@ -9,10 +9,12 @@ export default function lang (){
         portfBx = document.querySelectorAll('.portf-bx '),
         titleAbout = document.querySelectorAll('.lng_opt-about'),
         titlePortf = document.querySelectorAll('.lng_opt-portf'),
+        certBox = document.querySelectorAll('.lng_opt-cert'),
         titleHobby = document.querySelectorAll('.lng_opt-hobby'),
         backBx = document.querySelectorAll('.back-bx'),
         description = document.querySelectorAll('.lng_opt-about_descr'),
         hobbyBx = document.querySelectorAll('.hobby_bx'),
+        interestsBox = document.querySelectorAll('.lng-opt_hobby'),
         techBox = document.querySelectorAll('.lng_opt-stack'),
         contactBox = document.querySelectorAll('.lng_opt-cont');
 
@@ -63,16 +65,20 @@ export default function lang (){
             //Portfolio languages
             langNonActive(0, portfBx, 'active_lng');
             langNonActive(0, titlePortf, 'active_title');
+            langNonActive(0, certBox, 'active_title');
             
             langActive(k, portfBx, 'active_lng');
             langActive(k, titlePortf, 'active_title');
+            langActive(k, certBox, 'active_title');
 
             //Hobby languages
             langNonActive(0, hobbyBx, 'active_hobby');
             langNonActive(0, titleHobby, 'active_title-hobby');
+            langNonActive(0, interestsBox, 'active_interests');
 
             langActive(k, hobbyBx, 'active_hobby');
             langActive(k, titleHobby, 'active_title-hobby');
+            langActive(k, interestsBox, 'active_interests');
 
             //Technologies languages
             langNonActive(0, techBox, 'active_popup');

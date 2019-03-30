@@ -24,6 +24,12 @@ $main_color: #ac8b10
   100%
     background-color: #fcef9c
 
+@keyframes activ_ss-hobby
+  0%
+    background-color: #c0d1f5
+  100%
+    background-color: #1e8af5
+
 @keyframes portf_off
     0%
         opacity: 1
@@ -33,6 +39,12 @@ $main_color: #ac8b10
 @keyframes portf_on
     0%
         opacity: 0
+    100%
+        opacity: 1
+
+@keyframes slide_on
+    0%
+        opacity: 0.6
     100%
         opacity: 1
 
@@ -57,6 +69,12 @@ $main_color: #ac8b10
 @keyframes lang_on_hobby
     0%
         color: #5f91fb
+    100%
+        color: black
+
+@keyframes lang_on_interest
+    0%
+        color: rgba(255, 255, 255, 0.69)
     100%
         color: black
 
@@ -156,7 +174,7 @@ body
 
 .card
     margin: 0 auto
-    height: 800px
+    height: 616px
     width: 82%
     // border: 1px solid 
     position: relative
@@ -212,8 +230,8 @@ body
     position: absolute
     right: 131px
     bottom: 59px
-    width: 632px
-    height: 632px
+    width: 450px
+    height: 450px
     border-radius: 50%
 
 .light
@@ -231,7 +249,7 @@ body
 
 .naw_dsgn
     @include elem_dir
-    margin-top: 23px
+    margin: 23px
     flex-wrap: wrap
     text-align: center
     color: $main_color
@@ -245,21 +263,16 @@ body
 
 .naw_dsgn:hover
     @include activated
-    // background-color: #ffe894
-    // background-color: #f5cc35
-    // background-color: #bea23a
     background-color: $main_color
 
 .naw_dsgn:hover .lng_opt-menu
-    // color: #3e330c
-    // color: #5d4902
-    // color: #463805
     color: black
 
 .lng_opt-menu
     font-family: "RobotoMMd"
     text-decoration: none
     color: $main_color
+    margin: 0
 
 .lng_opt-menu,
 .lng_opt-about,
@@ -269,11 +282,17 @@ body
 .lng_opt-about_text,
 .lng_opt-about_descr,
 .lng_opt-cont,
-.lng_opt-stack
+.lng_opt-stack,
+.slider-box,
+.lng-opt_hobby,
+.cert_img,
+.lng_opt-cert,
+.lng_opt-sites,
+.site_link
     display: none
 
 .box_info
-    margin-top: 151px
+    margin-top: 73px
     color: $main_color
     display: flex
     justify-content: space-between
@@ -297,9 +316,9 @@ body
 
 .main_photo
     position: absolute
-    top: -48px
-    left: 54%
-    width: 319px
+    top: -36px
+    left: 61%
+    width: 248px
 
 .info_person
     @include elem_dir
@@ -307,15 +326,16 @@ body
 
 .lng_opt-info_text,
 .lng_opt-about_text
-    width: 67%
-    font-size: 24px
+    width: 70%
+    font-size: 19px
     z-index: 2
     margin-left: 7%
 .name_line
     font-size: 25px
 .name
-    font-size: 34px
+    font-size: 24px
     color: #fbe79d
+    font-style: italic
 
 .social
     display: flex
@@ -338,14 +358,16 @@ body
     // background-color: #c4c3c2
     background-color: #fcef9c
 
-.ss_img
+.ss_img,
+.ss_img-hobby
     width: 35px
+    height: 35px
 
 .main_back
     margin: 0 auto
     display: flex
     justify-content: flex-start
-    width: 83%
+    width: 89.1%
     height: 78px
 
 .title_about,
@@ -363,9 +385,9 @@ body
 
 .about_photo
     position: absolute
-    top: -93px
-    left: 62%
-    width: 342px
+    top: -67px
+    left: 71%
+    width: 257px
 
 .m_dsgn
     box-shadow: 22px 14px 21px -12px #c8a215, -25px -18px 14px -12px rgba(132, 131, 131, 0.9)
@@ -391,7 +413,7 @@ body
 .box_hb
     display: none
     margin: 0 auto
-    height: 800px
+    height: 616px
     width: 82%
     // border: 1px solid 
     position: absolute
@@ -401,7 +423,169 @@ body
     background-image: linear-gradient(150deg, #7f6505, #0d0b02 48%)
 
 .light_portfolio
-    background-image: radial-gradient(closest-side at 64% 18%, #7f6505, #0d0b01 151%)
+    background-image: radial-gradient(closest-side at 38% 18%, #7f6505, #0d0b01 151%)
+
+.info_portf
+    display: flex
+    margin: 0 auto
+    border: 1px solid white
+    width: 95%
+    height: 80%
+
+.lng_opt-cert
+    color: #ffdd5b
+
+.cert_slides
+    @include elem_dir
+    flex-direction: column
+    position: relative
+    border: 1px solid white
+    width: 38%
+    margin-left: 7%
+
+.cert_img
+    width: 290px
+    border: 1px solid #78610e
+    border-radius: 3%
+    box-shadow: 16px 13px 20px -12px #ac8b10
+
+.arrow_box-cert
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 7
+.left-c
+    position: absolute
+    top: 50%
+    left: 10px
+    @include elem_dir
+    width: 40px
+    height: 40px
+    opacity: 0.3
+    &:hover
+        opacity: 1
+
+.right-c
+    position: absolute
+    top: 50%
+    right: 10px
+    @include elem_dir
+    width: 40px
+    height: 40px
+    opacity: 0.3
+    &:hover
+        opacity: 1
+
+.arrow-c
+    position: relative
+    display: inline-block
+    width: 3rem
+    height: 5rem
+    margin: 2rem
+    // opacity: 0.3
+    &::before 
+        content: ''
+        display: block
+        position: absolute
+        
+        top: 50%
+        border: 2px solid #efe5a6
+        width: 10px
+        height: 10px
+        transform: translateY(-50%) rotate(45deg)        
+    &--left::before 
+        left: -8px
+        border-right: 0
+        border-top: 0
+    &--right::before
+        right: -8px
+        border-left: 1px
+        border-bottom: 1px
+
+.sites
+    display: flex
+    text-align: center
+    width: 58%
+    border: 1px solid white
+    z-index: 6
+
+.site-slide
+    position: relative
+    width: 56%
+    border: 1px solid white
+    height: 100%
+    margin-left: 29%
+
+.arrow_box-site
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 7
+.left-s
+    position: absolute
+    top: 50%
+    left: 10px
+    @include elem_dir
+    width: 40px
+    height: 40px
+    opacity: 0.3
+    &:hover
+        opacity: 1
+
+.right-s
+    position: absolute
+    top: 50%
+    right: 10px
+    @include elem_dir
+    width: 40px
+    height: 40px
+    opacity: 0.3
+    &:hover
+        opacity: 1
+
+.arrow-s
+    position: relative
+    display: inline-block
+    width: 3rem
+    height: 5rem
+    margin: 2rem
+    // opacity: 0.3
+    &::before 
+        content: ''
+        display: block
+        position: absolute
+        
+        top: 50%
+        border: 2px solid #efe5a6
+        width: 10px
+        height: 10px
+        transform: translateY(-50%) rotate(45deg)        
+    &--left::before 
+        left: -8px
+        border-right: 0
+        border-top: 0
+    &--right::before
+        right: -8px
+        border-left: 1px
+        border-bottom: 1px
+
+.ss-portf
+    @include elem_dir
+
+.ss-portf
+    height: 100%
+    width: 4%
+    &-box
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center 
+.mrgn
+    margin-bottom: 38px
 
 .title_portf
     display: none
@@ -429,7 +613,7 @@ body
 // ---------------#### Hobby box ####-------------------//
 
 .box_hobby
-    background: url(../img/hobby.jpg)
+    background: url(../img/hobby_min.jpg)
     background-repeat: no-repeat
     background-size: cover
     // background-image: linear-gradient(150deg, #7f6505, #0d0b02 48%)
@@ -437,25 +621,127 @@ body
 .lng_opt-hobby
     color: #030229
 
+.interests
+    color: #030229
+    margin: 3px
+
 .hobby_info
-    @include elem_dir
-    justify-content: space-around
-    margin-top: 98px
+    display: flex
+    align-items: center
+    // @include elem_dir
+    // justify-content: space-around
+    margin-top: 66px
+    &-box
+        width: 28%
     &-img
         @include elem_dir
     &-text
         display: flex
         justify-content: flex-start
         align-items: center
-        width: 30%
+        width: 28%
         z-index: 3
-        margin-left: -3%
+        margin-left: 0.5%
     &-slider
+        position: relative
         width: 30%
+        z-index: 4
+        display: flex
+        justify-content: center
 
-.lng-opt_hobby
-    width: 74%
+.arrow_box
+    position: absolute
+    width: 100%
     height: 100%
+    top: 0
+    left: 0
+    z-index: 7
+.left
+    position: absolute
+    top: 42%
+    left: -18px
+    @include elem_dir
+    width: 40px
+    height: 40px
+    opacity: 0.3
+    &:hover
+        opacity: 1
+
+.right
+    position: absolute
+    top: 42%
+    right: -18px
+    @include elem_dir
+    width: 40px
+    height: 40px
+    opacity: 0.3
+    &:hover
+        opacity: 1
+
+.arrow
+    position: relative
+    display: inline-block
+    width: 3rem
+    height: 5rem
+    margin: 2rem
+    // opacity: 0.3
+    &::before 
+        content: ''
+        display: block
+        position: absolute
+        
+        top: 50%
+        border: 2px solid #efe5a6
+        width: 10px
+        height: 10px
+        transform: translateY(-50%) rotate(45deg)        
+    &--left::before 
+        left: -8px
+        border-right: 0
+        border-top: 0
+    &--right::before
+        right: -8px
+        border-left: 1px
+        border-bottom: 1px
+    
+
+.slider-box
+    width: 89%
+    height: 265px
+    box-shadow: 0px 0px 9px 2px #07043c
+    border: 2px solid #264ea2
+    border-radius: 7%
+
+.slide_on
+    display: block
+    animation-name: slide_on
+    animation-duration: 1s
+    
+
+.ss-hobby
+    width: 4%
+    margin-left: 6%
+    &-box
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center 
+        
+.ss_img-hobby
+    margin: 15px 0 15px 0
+    background-color: #0cd299
+    border-radius: 50%
+    padding: 3px
+    &:hover
+        animation-name: activ_ss-hobby
+        animation-duration: 1.5s
+        background-color: #1e8af5
+        cursor: pointer
+
+.interests
+    @include elem_dir
+    width: 84%
+    height: 361px
     color: #101000
     padding: 25px
     border: 2px solid #fcef9c
@@ -463,24 +749,36 @@ body
     background-color: rgba(255, 255, 255, 0.69)
     box-shadow: 12px 13px 34px 7px rgba(65, 64, 64, 0.9)
 
+.h_title
+    font-size: 25px
+    font-weight: 600
+    margin: 0 0 29px 0
+    line-height: 1.3
+
 .img-hobby
-    width: 356px
+    width: 301px
     border: 4px solid #e6c751
     border-radius: 26%
     box-shadow: 10px 11px 44px 10px #272201
-    margin-left: 5%
+    margin-left: 8%
 
 .light_hobby
-    background-image: url(../img/earth.png)
+    // background-image: url(../img/earth.png)
     box-shadow: 12px 13px 34px 7px rgba(65, 64, 64, 0.9)
     // background-image: radial-gradient(closest-side at 64% 18%, #7f6505, #0d0b01 151%)
+
+.ss-hobby
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
 
 .label
     transform: rotate(-90deg)
     position: absolute
     border: 1px solid #0900c5
-    right: -6%
-    top: 433px
+    right: -96px
+    top: 340px
     background-color: #5f91fb
     border-bottom: none
     border-radius: 23%
@@ -575,6 +873,12 @@ body
     animation-name: lang_on_hobby
     animation-duration: 1.5s
 
+.active_interests
+    display: block
+    animation-name: lang_on_interest
+    animation-duration: 1.5s
+    
+
 .active_title
     display: block
     animation-name: lang_on_title
@@ -601,3 +905,18 @@ body
     animation-name: popup_backdrop_off
     animation-duration: 1.5s
     opacity: 0
+
+
+// // --------------### MEDIA max-width: 1920px ###-------------------//
+
+// @media (max-width: 1920px)
+//     .label 
+//         right: -5%
+//         top: 518px
+
+// // --------------### MEDIA max-width: 1820px ###-------------------//
+
+// @media (max-width: 1220px)
+//     .label 
+//         right: -5%
+//         top: 0px

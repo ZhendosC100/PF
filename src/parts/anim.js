@@ -2,8 +2,8 @@ export default function anim (){
 
     // Box About me
     let btn_about = document.querySelector('.about'),
-    btn_main = document.querySelectorAll('.main'),
-    card = document.querySelector('.card');
+        btn_main = document.querySelectorAll('.main'),
+        card = document.querySelector('.card');
 
     btn_about.addEventListener('click', ()=>{
             card.classList.add('active');
@@ -68,7 +68,9 @@ export default function anim (){
         boxPf.style.display = 'block';
         titleDisplay();
         boxPortfolio.classList.add('portf_on');
-        setTimeout(portfOn, 1400);
+        // setTimeout(portfOn, 1400);
+        setTimeout(portfOn, 2000);
+
     });
 
     // Hobby box
@@ -91,7 +93,8 @@ export default function anim (){
         boxHb.style.display = 'block';
         boxHobby.classList.add('portf_on');
         titleDisplay();
-        setTimeout(hobbyOn, 1400);
+        // setTimeout(hobbyOn, 1400);
+        setTimeout(hobbyOn, 2000);
     });
 
     btnOffHb.addEventListener('click', () =>{
