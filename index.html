@@ -13,7 +13,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="img/ico/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/ico/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/ico/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/ico/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/ico/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="img/ico/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/ico/favicon-16x16.png">
@@ -31,52 +31,60 @@
     <div class="nav_wrapper">
         <nav class="lang_box">
             <div class="lang_select active_select pl">
-                <p class="lang_border">PL</p> 
+                <p class="lang_border">PL</p>
             </div>
             <div class="lang_select uk">
-                <p class="lang_border">EN</p> 
+                <p class="lang_border">EN</p>
             </div>
             <div class="lang_select ru">
-                <p class="lang_border">RU</p> 
+                <p class="lang_border">RU</p>
             </div>
         </nav>
     </div>
-    
+
     <div class="box_wrapper">
         <div class="card">
             <div class="box_card_front">
+                <div class="naw_dsgn hide_main">
+                    <p class="lng_opt-menu hide active_lng">Menu</p>
+                    <p class="lng_opt-menu hide">Menu</p>
+                    <p class="lng_opt-menu hide">Меню</p>
+                </div>
                 <nav class="box_menu">
                     <div class="naw_dsgn about">
-                        <p class="lng_opt-menu about_main active_lng" href="#">O mnie</p>
-                        <p class="lng_opt-menu about_main" href="#">About me</p>
-                        <p class="lng_opt-menu about_main" href="#">О себе</p>
+                        <p class="lng_opt-menu about_main active_lng">O mnie</p>
+                        <p class="lng_opt-menu about_main">About me</p>
+                        <p class="lng_opt-menu about_main">О себе</p>
                     </div>
                     <div class="naw_dsgn portfol">
-                        <p class="lng_opt-menu portf_main active_lng" href="#">Portfolio</p>
-                        <p class="lng_opt-menu portf_main" href="#">Portfolio</p>
-                        <p class="lng_opt-menu portf_main" href="#">Портфолио</p>
+                        <p class="lng_opt-menu portf_main active_lng">Portfolio</p>
+                        <p class="lng_opt-menu portf_main">Portfolio</p>
+                        <p class="lng_opt-menu portf_main">Портфолио</p>
                     </div>
                     <div class="naw_dsgn hobby">
-                        <p class="lng_opt-menu hobby_main active_lng" href="#">Zainteresowania</p>
-                        <p class="lng_opt-menu hobby_main" href="#">Interests</p>
-                        <p class="lng_opt-menu hobby_main" href="#">Хобби</p>
+                        <p class="lng_opt-menu hobby_main active_lng">Zainteresowania</p>
+                        <p class="lng_opt-menu hobby_main">Interests</p>
+                        <p class="lng_opt-menu hobby_main">Хобби</p>
                     </div>
                     <div class="naw_dsgn tech">
-                        <p class="lng_opt-menu tech_main active_lng" href="#">Technologii</p>
-                        <p class="lng_opt-menu tech_main" href="#">Further skills</p>
-                        <p class="lng_opt-menu tech_main" href="#">Технологии</p>
+                        <p class="lng_opt-menu tech_main active_lng">Technologii</p>
+                        <p class="lng_opt-menu tech_main">Further skills</p>
+                        <p class="lng_opt-menu tech_main">Технологии</p>
                     </div>
                     <div class="naw_dsgn cont">
-                        <p class="lng_opt-menu cont_main active_lng" href="#">Kontakt</p>
-                        <p class="lng_opt-menu cont_main" href="#">Contact</p>
-                        <p class="lng_opt-menu cont_main" href="#">Контакт</p>
+                        <p class="lng_opt-menu cont_main active_lng">Kontakt</p>
+                        <p class="lng_opt-menu cont_main">Contact</p>
+                        <p class="lng_opt-menu cont_main">Контакт</p>
                     </div>
                 </nav>
                 <div class="light"></div>
                 <div class="box_info">
                     <div class="box_photo">
                         <p class="title">Front-End <br> Developer</p>
-                        <img src="img/Photo_1.png" alt="pic" class="main_photo">
+                        <picture>
+                            <source media="(min-width: 1520px)" srcset="img/Photo_1_min.png">
+                            <img src="img/Photo_1.png" alt="pic" class="main_photo">
+                        </picture>
                     </div>
                     <div class="info_person">
                         <div class="lng_opt-info_text active_lng">
@@ -84,38 +92,40 @@
                             <p class="name_line">Nazywam się <span class="name">Eugeniusz Trecjak</span>.</p>
                             <p>Jestem Junior Front-End Developerem.</p>
                             <p>Moja strona zawiera krótką informację o mnie.</p>
-                        </div> 
+                        </div>
                         <div class="lng_opt-info_text">
-                            <p>Welcome on my site!</p>
+                            <p>Welcome to my site!</p>
                             <p class="name_line">My name is <span class="name">Yauhen Tretsyak</span>.</p>
                             <p>I am is a Junior Front-End Developer</p>
                             <p>My site contains short information about me.</p>
-                        </div> 
+                        </div>
                         <div class="lng_opt-info_text">
                             <p>Приветствую на своем сайте!</p>
                             <p class="name_line">Меня зовут <span class="name">Евгений Третьяк</span>.</p>
                             <p>Я Junior Front-End Developer</p>
                             <p>Моя страница содержит краткую информацию обо мне.</p>
-                        </div> 
+                        </div>
                     </div>
                     <div class="social">
                         <div class="ss">
-                            <a href="#" class="ss_link">
-                                <img class="ss_img" src="./img/fb.png" alt="FaceBook" title="FaceBook">
+                            <a href="https://www.facebook.com/profile.php?id=100015931958322" class="ss_link"
+                                target="_blank">
+                                <img class="ss_img" src="./img/fb.png" alt="Facebook" title="Facebook">
                             </a>
                         </div>
                         <div class="ss">
-                            <a href="#" class="ss_link">
+                            <a href="https://www.linkedin.com/in/eugeniusz-trecjak-b944b113b/" class="ss_link"
+                                target="_blank">
                                 <img class="ss_img" src="./img/linkedln.png" alt="linkedln" title="linkedln">
                             </a>
                         </div>
                         <div class="ss">
-                            <a href="#" class="ss_link">
+                            <a href="https://github.com/ZhendosC100" class="ss_link" target="_blank">
                                 <img class="ss_img" src="./img/git.png" alt="GitHub" title="GitHub">
                             </a>
                         </div>
                         <div class="ss">
-                            <a href="#" class="ss_link">
+                            <a href="https://www.instagram.com/eugeniusz_c100/?hl=pl" class="ss_link" target="_blank">
                                 <img class="ss_img" src="./img/inst.png" alt="Instagram" title="Instagram">
                             </a>
                         </div>
@@ -131,7 +141,7 @@
                     </div>
                 </div>
                 <div class="main_back">
-                    <div class="naw_dsgn m_dsgn main">
+                    <div class="naw_dsgn m_dsgn main non_color">
                         <p class="lng_opt-menu back-bx lng_m active_lng" href="#">Główna</p>
                         <p class="lng_opt-menu back-bx lng_m" href="#">Main page</p>
                         <p class="lng_opt-menu back-bx lng_m" href="#">Главная</p>
@@ -169,37 +179,56 @@
                                     - Хорошее чувство юмора
                                 </p>
                             </div>
-                            
-                            <img src="img/Photo_2.png" alt="pic" class="about_photo">
+                            <picture>
+                                <source media="(min-width: 1520px)" srcset="img/Photo_2_min.png">
+                                <img src="img/Photo_2.png" alt="pic" class="about_photo">
+                            </picture>
                         </div>
                         <div class="info_person">
-                            <p class="lng_opt-about_text active_lng">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Laborum voluptatum recusandae natus laudantium vero unde 
-                                laboriosam! Dolore maxime, tempore quaerat, aperiam ipsa 
-                                nulla ea cum est quisquam a repudiandae blanditiis excepturi 
-                                quia cumque quae rem illo explicabo quod eaque magnam vitae,
-                            </p> 
+                            <div class="lng_opt-about_text active_lng">
+                                <span class="t-indent">
+                                    Постоянно занимаюсь развитием своей личности,
+                                    люблю преодолевать различные трудности.
+                                </span>
+                                <span class="t-indent">
+                                    Легко адаптируюсь в новом коллективе, умею
+                                    работать в команде.
+                                </span>
+                                <span class="t-indent">
+                                    Позитивный взгляд на жизнь.
+                                </span>
+                                <div class="line"></div>
+                                <span class="t-indent">
+                                    Считаю, что всестороннее развитие, общение,
+                                    путешествия, кропотливый труд и ответственность
+                                    за свои действия - основа для достижения поставленных
+                                    целей.
+                                </span>
+                                
+                            </div>
                         </div>
                         <div class="social">
                             <div class="ss">
-                                <a href="#" class="ss_link">
-                                    <img class="ss_img" src="./img/fb.png" alt="FaceBook">
+                                <a href="https://www.facebook.com/profile.php?id=100015931958322" class="ss_link"
+                                    target="_blank">
+                                    <img class="ss_img" src="./img/fb.png" alt="FaceBook" title="Facebook">
                                 </a>
                             </div>
                             <div class="ss">
-                                <a href="#" class="ss_link">
-                                    <img class="ss_img" src="./img/linkedln.png" alt="linkedln">
+                                <a href="https://www.linkedin.com/in/eugeniusz-trecjak-b944b113b/" class="ss_link"
+                                    target="_blank">
+                                    <img class="ss_img" src="./img/linkedln.png" alt="linkedln" title="Linkedln">
                                 </a>
                             </div>
                             <div class="ss">
-                                <a href="#" class="ss_link">
-                                    <img class="ss_img" src="./img/git.png" alt="GitHub">
+                                <a href="https://github.com/ZhendosC100" class="ss_link" target="_blank">
+                                    <img class="ss_img" src="./img/git.png" alt="GitHub" title="GitHub">
                                 </a>
                             </div>
                             <div class="ss">
-                                <a href="#" class="ss_link">
-                                    <img class="ss_img" src="./img/inst.png" alt="Instagram">
+                                <a href="https://www.instagram.com/eugeniusz_c100/?hl=pl" class="ss_link"
+                                    target="_blank">
+                                    <img class="ss_img" src="./img/inst.png" alt="Instagram" title="Instagram">
                                 </a>
                             </div>
                         </div>
@@ -209,7 +238,7 @@
             </div>
         </div>
 
-<!-- Portfolio box -->
+        <!-- Portfolio box -->
 
         <div class="box_pf">
             <div class="title_portf">
@@ -221,7 +250,7 @@
             </div>
             <div class="box_portfolio">
                 <div class="main_back">
-                    <div class="naw_dsgn m_dsgn main_portf">
+                    <div class="naw_dsgn m_dsgn main_portf non_color">
                         <p class="lng_opt-menu portf-bx lng_m active_lng">Główna</p>
                         <p class="lng_opt-menu portf-bx lng_m">Main page</p>
                         <p class="lng_opt-menu portf-bx lng_m">Главная</p>
@@ -247,15 +276,16 @@
                     </div>
                     <div class="sites">
                         <div class="site-slide">
-                            <p class="lng_opt-sites active_title">Niektóre moje storny</p>
+                            <p class="lng_opt-sites active_title">Niektóre moje prace</p>
                             <p class="lng_opt-sites">Some of my work</p>
                             <p class="lng_opt-sites">Некоторые мои работы</p>
-                        
-                            <a href="#" class="site_link slide_on">
-                                <img src="img/cert/js_kurs.jpg" alt="certificat" class="cert_img">
+
+                            <a href="https://zhendosc100.github.io/Jablonski/" class="site_link slide_on"
+                                target="_blank">
+                                <img src="img/sites/jablonski.png" alt="certificat" class="site_img">
                             </a>
-                            <a href="#" class="site_link">
-                                <img src="img/cert/html_css.jpg" alt="certificat" class="cert_img">
+                            <a href="https://zhendosc100.github.io/Jablonski/" class="site_link" target="_blank">
+                                <img src="img/sites/jablonski.png" alt="certificat" class="site_img">
                             </a>
                             <div class="arrow_box-site">
                                 <div class="left-s">
@@ -269,36 +299,38 @@
                     </div>
                     <div class="ss-portf">
                         <div class="ss-portf-box">
-                            <a href="#" class="ss_link mrgn">
+                            <a href="https://github.com/ZhendosC100" class="ss_link mrgn" target="_blank">
                                 <img class="ss_img" src="./img/git.png" alt="GitHub" title="GitHub">
                             </a>
-                            <a href="#" class="ss_link mrgn">
-                                    <img class="ss_img" src="./img/linkedln.png" alt="linkedln" title="linkedln">
-                                </a>
-                            <a href="#" class="ss_link mrgn">
+                            <a href="https://www.linkedin.com/in/eugeniusz-trecjak-b944b113b/" class="ss_link mrgn"
+                                target="_blank">
+                                <img class="ss_img" src="./img/linkedln.png" alt="linkedln" title="linkedln">
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100015931958322" class="ss_link mrgn"
+                                target="_blank">
                                 <img class="ss_img" src="./img/fb.png" alt="FaceBook" title="Facebook">
                             </a>
                         </div>
                     </div>
                 </div>
-                        <!-- <p class="screen">ET</p>   -->
+                <!-- <p class="screen">ET</p>   -->
                 <div class="light_portfolio"></div>
             </div>
         </div>
 
-<!-- Interests box -->
+        <!-- Interests box -->
 
         <div class="box_hb">
             <div class="box_hobby">
                 <div class="title_portf">
-                <div class="wrap_about">
-                    <p class="lng_opt-hobby active_title-hobby">Zainteresowania</p>
-                    <p class="lng_opt-hobby">Interests</p>
-                    <p class="lng_opt-hobby">Хобби</p>
-                </div>
+                    <div class="wrap_about">
+                        <p class="lng_opt-hobby active_title-hobby">Zainteresowania</p>
+                        <p class="lng_opt-hobby">Interests</p>
+                        <p class="lng_opt-hobby">Хобби</p>
+                    </div>
                 </div>
                 <div class="main_back">
-                    <div class="naw_dsgn hb_dsgn main_hobby">
+                    <div class="naw_dsgn hb_dsgn main_hobby non_color">
                         <p class="lng_opt-menu hobby_bx lng_h active_hobby">Główna</p>
                         <p class="lng_opt-menu hobby_bx lng_h">Main page</p>
                         <p class="lng_opt-menu hobby_bx lng_h">Главная</p>
@@ -307,46 +339,54 @@
                 <div class="hobby_info">
                     <div class="hobby_info-box">
                         <img class="img-hobby" src="img/hobby_image.png" alt="Photo">
+                        <div class="hide_menu">
+                            <div class="lng_opt-h_menu active_title-hobby">Zainteresowania</div>
+                            <div class="lng_opt-h_menu">Interests</div>
+                            <div class="lng_opt-h_menu">Хобби</div>
+                            <div class="arrow_bottom">
+                                <div class="arrow_b arrow_b--left"></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="hobby_info-text">
                         <div class="interests">
-                                <div class="lng-opt_hobby active_interests">
-                                        <p class="h_title">Zainteresowania:</p>
-                                        - programowamie <br>
-                                        - rozwój własny <br>
-                                        - nowoczesne technologii<br>
-                                        - podróż <br>
-                                        - jazda na rowerze <br>
-                                        - zdjęcie amatorskie <br>
-                                        - mechanika samochodowa <br>
-                                        - łamigłówki <br>
-                                        - zbieranie monet <br> 
-                                    </div>
-                                    <div class="lng-opt_hobby">
-                                        <p class="h_title">Interests:</p>
-                                        - programming <br>
-                                        - personal development <br>
-                                        - new technologies <br>
-                                        - traveling <br>
-                                        - bicycle riding <br>
-                                        - amateur photos <br>
-                                        - car mechanics <br>
-                                        - puzzles <br>
-                                        - collecting coins <br> 
-                                    </div>
-                                    <div class="lng-opt_hobby">
-                                        <p class="h_title">Хобби:</p>
-                                        - программирование <br>
-                                        - саморазвитие <br>
-                                        - новые технологии <br>
-                                        - путешествия <br>
-                                        - велопрогулки <br>
-                                        - любительское фото <br>
-                                        - автомеханика <br>
-                                        - пазлы <br>
-                                        - коллекционирование <br>
-                                          монет 
-                                    </div>
+                            <div class="lng-opt_hobby active_interests">
+                                <p class="h_title">Zainteresowania:</p>
+                                - programowanie <br>
+                                - rozwój własny <br>
+                                - nowoczesne technologii<br>
+                                - podróż <br>
+                                - jazda na rowerze <br>
+                                - zdjęcie amatorskie <br>
+                                - mechanika samochodowa <br>
+                                - łamigłówki <br>
+                                - zbieranie monet <br>
+                            </div>
+                            <div class="lng-opt_hobby">
+                                <p class="h_title">Interests:</p>
+                                - programming <br>
+                                - personal development <br>
+                                - new technologies <br>
+                                - traveling <br>
+                                - bicycle riding <br>
+                                - amateur photos <br>
+                                - car mechanics <br>
+                                - puzzles <br>
+                                - collecting coins <br>
+                            </div>
+                            <div class="lng-opt_hobby">
+                                <p class="h_title">Хобби:</p>
+                                - программирование <br>
+                                - саморазвитие <br>
+                                - новые технологии <br>
+                                - путешествия <br>
+                                - велопрогулки <br>
+                                - любительское фото <br>
+                                - автомеханика <br>
+                                - пазлы <br>
+                                - коллекционирование <br>
+                                монет
+                            </div>
                         </div>
                     </div>
                     <div class="hobby_info-slider">
@@ -367,27 +407,27 @@
                     </div>
                     <div class="ss-hobby">
                         <div class="ss-hobby-box">
-                            <a href="#">
-                                <img class="ss_img-hobby" src="./img/fb.png" alt="FaceBook">
+                            <a href="https://www.facebook.com/profile.php?id=100015931958322" target="_blank">
+                                <img class="ss_img-hobby" src="./img/fb.png" alt="Facebook">
                             </a>
-                            <a href="#">
+                            <a href="https://www.instagram.com/eugeniusz_c100/?hl=pl" target="_blank">
                                 <img class="ss_img-hobby" src="./img/inst.png" alt="Instagram">
                             </a>
                         </div>
                     </div>
-                </div>  
+                </div>
                 <!-- <div class="light_hobby"> -->
-                    <img class="light_hobby" src="img/earth.png" alt="earth">
+                <img class="light_hobby" src="img/earth.png" alt="earth">
                 <!-- </div> -->
                 <div class="label">
                     Designed by E.Tretsyak
                 </div>
             </div>
-            
+
         </div>
-        
+
     </div>
-<!-- Popup background, technologies -->
+    <!-- Popup background, technologies -->
     <div class="popup_backdrop"></div>
     <aside class="popup_tech">
         <div class="popup_tech-info">
@@ -404,7 +444,7 @@
                 AJAX/JSON <br>
                 React <br>
                 jQuery <br>
-                Kontorla wersji Git <br>
+                Git <br>
                 Webpack <br>
                 Cross-Browsing <br>
                 Avocode/Photoshop
@@ -412,36 +452,36 @@
 
         </div>
     </aside>
-<!-- Popup contact -->
+    <!-- Popup contact -->
     <aside class="popup_contact">
-            
+
         <div class="popup_contact-info">
 
-             <div class="light_popup"></div>
+            <div class="light_popup"></div>
             <img src="img/close.png" alt="" class="close-contact">
 
             <div class="lng_opt-cont active_popup">
                 <p>Skontaktuj się<br>ze mną</p>
                 <p>tel.: <br> <i>+48 792 193 919</i> </p>
                 <p>
-                   e-mail: <br><i>zhendos@tut.by</i>
+                    e-mail: <br><i>zhendos@tut.by</i>
                 </p>
-    
+
             </div>
-            
+
             <div class="lng_opt-cont">
                 <p>Contact<br>with me</p>
                 <p>tel.: <br> <i>+48 792 193 919</i></p>
                 <p>
-                   e-mail: <br> <i>zhendos@tut.by</i>
+                    e-mail: <br> <i>zhendos@tut.by</i>
                 </p>
-    
+
             </div>
             <div class="lng_opt-cont">
                 <p>Связаться<br>со мной</p>
                 <p>тел.: <br> <i>+48 792 193 919</i></p>
                 <p>
-                   e-mail: <br> <i>zhendos@tut.by</i>
+                    e-mail: <br> <i>zhendos@tut.by</i>
                 </p>
 
             </div>

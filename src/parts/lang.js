@@ -1,5 +1,6 @@
 export default function lang (){
     let selectLang = document.querySelectorAll('.lang_select'),
+        hideMain = document.querySelectorAll('.hide'),
         aboutMain = document.querySelectorAll('.about_main'),
         portfMain = document.querySelectorAll('.portf_main'),
         hobbyMain = document.querySelectorAll('.hobby_main'),
@@ -9,11 +10,13 @@ export default function lang (){
         portfBx = document.querySelectorAll('.portf-bx '),
         titleAbout = document.querySelectorAll('.lng_opt-about'),
         titlePortf = document.querySelectorAll('.lng_opt-portf'),
+        sitesBox = document.querySelectorAll('.lng_opt-sites'),
         certBox = document.querySelectorAll('.lng_opt-cert'),
         titleHobby = document.querySelectorAll('.lng_opt-hobby'),
         backBx = document.querySelectorAll('.back-bx'),
         description = document.querySelectorAll('.lng_opt-about_descr'),
         hobbyBx = document.querySelectorAll('.hobby_bx'),
+        hiddenBx = document.querySelectorAll('.lng_opt-h_menu'),
         interestsBox = document.querySelectorAll('.lng-opt_hobby'),
         techBox = document.querySelectorAll('.lng_opt-stack'),
         contactBox = document.querySelectorAll('.lng_opt-cont');
@@ -42,12 +45,14 @@ export default function lang (){
             langNonActive(0, hobbyMain, 'active_lng');
             langNonActive(0, techMain, 'active_lng');
             langNonActive(0, contMain, 'active_lng');
+            langNonActive(0, hideMain, 'active_lng');
             
             langActive(k, aboutMain, 'active_lng');
             langActive(k, portfMain, 'active_lng');
             langActive(k, hobbyMain, 'active_lng');
             langActive(k, techMain, 'active_lng');
             langActive(k, contMain, 'active_lng');
+            langActive(k, hideMain, 'active_lng');
 
             //Main page text
             langNonActive(0, mainText, 'active_lng');
@@ -66,19 +71,23 @@ export default function lang (){
             langNonActive(0, portfBx, 'active_lng');
             langNonActive(0, titlePortf, 'active_title');
             langNonActive(0, certBox, 'active_title');
+            langNonActive(0, sitesBox, 'active_title');
             
             langActive(k, portfBx, 'active_lng');
             langActive(k, titlePortf, 'active_title');
             langActive(k, certBox, 'active_title');
+            langActive(k, sitesBox, 'active_title');
 
             //Hobby languages
             langNonActive(0, hobbyBx, 'active_hobby');
             langNonActive(0, titleHobby, 'active_title-hobby');
             langNonActive(0, interestsBox, 'active_interests');
+            langNonActive(0, hiddenBx, 'active_title-hobby');
 
             langActive(k, hobbyBx, 'active_hobby');
             langActive(k, titleHobby, 'active_title-hobby');
             langActive(k, interestsBox, 'active_interests');
+            langActive(k, hiddenBx, 'active_title-hobby');
 
             //Technologies languages
             langNonActive(0, techBox, 'active_popup');
