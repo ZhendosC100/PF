@@ -1,7 +1,7 @@
 export default function sliderPortf(){
     let prev = document.querySelector('.left-c'),
         next = document.querySelector('.right-c'),
-        slideCert = document.querySelectorAll('.cert_img'),
+        slideCert = document.querySelectorAll('.zoom'),
         prevS = document.querySelector('.left-s'),
         nextS = document.querySelector('.right-s'),
         slideSite = document.querySelectorAll('.site_link'),

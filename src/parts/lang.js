@@ -9,6 +9,7 @@ export default function lang (){
         mainText = document.querySelectorAll('.lng_opt-info_text'),
         portfBx = document.querySelectorAll('.portf-bx '),
         titleAbout = document.querySelectorAll('.lng_opt-about'),
+        aboutBox = document.querySelectorAll('.lng_opt-about_text'),
         titlePortf = document.querySelectorAll('.lng_opt-portf'),
         sitesBox = document.querySelectorAll('.lng_opt-sites'),
         certBox = document.querySelectorAll('.lng_opt-cert'),
@@ -62,10 +63,12 @@ export default function lang (){
             langNonActive(0, backBx, 'active_lng');
             langNonActive(0, titleAbout, 'active_title');
             langNonActive(0, description, 'active_lng');
+            langNonActive(0, aboutBox, 'active_lng');
 
             langActive(k, backBx, 'active_lng');
             langActive(k, titleAbout, 'active_title');
             langActive(k, description, 'active_lng');
+            langActive(k, aboutBox, 'active_lng');
 
             //Portfolio languages
             langNonActive(0, portfBx, 'active_lng');

@@ -9,7 +9,7 @@ export default function hideMenu(){
 
             let turnOff = setTimeout(function(){
                 boxMenu.style.display = 'none';
-            }, 5000);
+            }, 7000);
 
             if (boxMenu.style.display == 'flex'){
                 boxMenu.style.display = 'none';

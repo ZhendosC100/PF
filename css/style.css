@@ -501,7 +501,7 @@ body {
 .lng_opt-stack,
 .slider-box,
 .lng-opt_hobby,
-.cert_img,
+.zoom,
 .lng_opt-cert,
 .lng_opt-sites,
 .site_link,
@@ -746,6 +746,7 @@ body {
 
 .light_portfolio {
   background-image: radial-gradient(closest-side at 38% 18%, #7f6505, #0d0b01 151%);
+  z-index: -1;
 }
 
 .info_portf {
@@ -786,6 +787,19 @@ body {
   border-radius: 3%;
   -webkit-box-shadow: 16px 13px 20px -12px #ac8b10;
           box-shadow: 16px 13px 20px -12px #ac8b10;
+}
+
+.zoom {
+  position: relative;
+  z-index: 8;
+}
+
+.zoom-slide {
+  width: 29%;
+}
+
+.zoom-slide-responsive {
+  width: 69%;
 }
 
 .arrow_box-cert {
@@ -879,7 +893,7 @@ body {
   display: flex;
   text-align: center;
   width: 58%;
-  z-index: 6;
+  z-index: 7;
 }
 
 .lng_opt-sites {
@@ -1289,6 +1303,7 @@ body {
   background-color: rgba(255, 255, 255, 0.69);
   -webkit-box-shadow: 12px 13px 34px 7px rgba(65, 64, 64, 0.9);
           box-shadow: 12px 13px 34px 7px rgba(65, 64, 64, 0.9);
+  line-height: 1.7;
 }
 
 .h_title {
@@ -1512,6 +1527,29 @@ body {
   }
 }
 
+@media (max-width: 1441px) {
+  .about_photo {
+    left: 74%;
+    z-index: 1;
+  }
+  .site_link {
+    width: 73%;
+  }
+  .site-slide {
+    margin-left: 25%;
+  }
+  .slider-box {
+    width: 89%;
+    height: 242px;
+  }
+  .hobby_info-slider {
+    margin-left: -13px;
+  }
+  .ss-hobby {
+    margin-left: 6.5%;
+  }
+}
+
 @media (max-width: 1199px) {
   .lang_box {
     margin-top: -47%;
@@ -1550,6 +1588,7 @@ body {
     top: -21px;
     left: 73%;
     width: 227px;
+    z-index: 2;
   }
   .box_photo {
     height: 273px;
@@ -1602,6 +1641,162 @@ body {
   }
   .label {
     top: 324px;
+  }
+}
+
+@media (max-width: 1130px) {
+  .site-slide {
+    margin-left: 25%;
+  }
+  .site_link {
+    width: 72%;
+  }
+  .hobby_info-slider {
+    margin-left: -58px;
+    width: 34%;
+    z-index: 2;
+  }
+  .interests {
+    position: absolute;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.85);
+    left: 300px;
+    width: 253px;
+    z-index: 9;
+  }
+  .hide_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 182px;
+    cursor: context-menu;
+    position: absolute;
+    top: 149px;
+    right: -39%;
+    background-color: #ded38e;
+    padding: 2px 4px 0 4px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    border: 3px solid #e6c751;
+    border-radius: 32% 32% 0 0;
+  }
+  .arrow_b {
+    position: relative;
+    display: inline-block;
+    width: 7px;
+    height: 10px;
+    margin-left: 17px;
+  }
+  .arrow_b::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    border: 2px solid #6f5906;
+    width: 10px;
+    height: 10px;
+    -webkit-transform: translateY(-50%) rotate(315deg);
+            transform: translateY(-50%) rotate(315deg);
+  }
+  .arrow_b--left::before {
+    left: -8px;
+    border-right: 0;
+    border-top: 0;
+  }
+}
+
+@media (max-width: 1130px) {
+  .hide_menu {
+    right: -43%;
+  }
+  .hobby_info-slider {
+    margin-left: -64px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .hide_menu {
+    right: -48%;
+  }
+  .hobby_info-slider {
+    margin-left: -74px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .box_photo {
+    height: 232px;
+  }
+  .box_info {
+    margin-top: 69px;
+  }
+  .main_photo {
+    top: -28px;
+    left: 75%;
+    width: 214px;
+  }
+  .lng_opt-info_text {
+    margin-left: 37%;
+  }
+  .light,
+  .light_back,
+  .light_portfolio,
+  .light_hobby {
+    right: 81px;
+    width: 340px;
+    height: 340px;
+    bottom: 70px;
+  }
+  .about_photo {
+    top: -36px;
+    width: 209px;
+    z-index: 1;
+  }
+  .lng_opt-about_descr {
+    font-size: 16px;
+  }
+  .lng_opt-about_text {
+    font-size: 14px;
+  }
+  .left-c {
+    left: -14px;
+  }
+  .right-c {
+    right: -16px;
+  }
+  .site-slide {
+    margin-left: 26%;
+  }
+  .left-s {
+    left: -6px;
+  }
+  .right-s {
+    right: -7px;
+  }
+  .site_link {
+    width: 82%;
+  }
+  .img-hobby {
+    margin-left: 28%;
+  }
+  .hobby_info-slider {
+    margin-left: -58px;
+    width: 37%;
+    z-index: 2;
+  }
+  .interests {
+    left: 337px;
+    width: 253px;
+  }
+  .hide_menu {
+    top: 145px;
+    right: -73%;
+  }
+  .ss-hobby {
+    margin-left: 4%;
   }
 }
 
@@ -1677,6 +1872,9 @@ body {
   .ss-portf {
     z-index: 1;
   }
+  .title_portf {
+    left: 36%;
+  }
   .hobby_info {
     margin-top: 37px;
   }
@@ -1684,68 +1882,20 @@ body {
     position: relative;
   }
   .interests {
-    position: absolute;
-    display: none;
-    background-color: rgba(255, 255, 255, 0.85);
     left: 96px;
-    width: 253px;
-    z-index: 9;
   }
   .img-hobby {
     margin-left: 32%;
   }
   .hide_menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 146px;
-    cursor: context-menu;
-    position: absolute;
-    top: 145px;
     right: -186px;
-    background-color: #ded38e;
-    padding: 2px 4px 0 4px;
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-    border: 3px solid #e6c751;
-    border-radius: 32% 32% 0 0;
-  }
-  .bottom_arrow {
-    width: 10px;
-    height: 10px;
-  }
-  .arrow_b {
-    position: relative;
-    display: inline-block;
-    width: 7px;
-    height: 10px;
-    margin-left: 17px;
-  }
-  .arrow_b::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 50%;
-    border: 2px solid #6f5906;
-    width: 10px;
-    height: 10px;
-    -webkit-transform: translateY(-50%) rotate(315deg);
-            transform: translateY(-50%) rotate(315deg);
-  }
-  .arrow_b--left::before {
-    left: -8px;
-    border-right: 0;
-    border-top: 0;
   }
   .slider-box {
-    height: 167px;
+    height: 196px;
   }
   .hobby_info-slider {
-    margin-left: 0px;
-    z-index: 2;
+    width: 36%;
+    margin-left: -28px;
   }
   .left {
     top: 39%;
@@ -1841,7 +1991,7 @@ body {
   .lng_opt-about_text {
     margin-left: 26%;
     margin-top: -16px;
-    ont-size: 11px;
+    font-size: 11px;
   }
   .ss-portf {
     display: none;
@@ -1887,6 +2037,7 @@ body {
     margin-top: 15px;
   }
   .hide_menu {
+    width: 146px;
     top: 115px;
     right: -144px;
     font-size: 12px;
@@ -1896,6 +2047,11 @@ body {
   }
   .slider-box {
     width: 124%;
+    height: 180px;
+  }
+  .hobby_info-slider {
+    width: 30%;
+    margin-left: -1px;
   }
   .left {
     left: -51px;
@@ -1905,6 +2061,527 @@ body {
   }
   .label {
     top: 279px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 72%;
+  }
+  .naw_dsgn {
+    z-index: 5;
+  }
+  .lng_opt-menu {
+    color: #fcef9c;
+  }
+  .box_info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 19px;
+  }
+  .box_photo {
+    margin-left: -11%;
+    width: 73%;
+  }
+  .lng_opt-info_text {
+    margin-left: 3%;
+    width: 87%;
+    text-shadow: 3px 3px 4px black;
+  }
+  .ss_link {
+    margin: 26px 0px 13px 0px;
+  }
+  .title_about {
+    font-size: 30px;
+    left: 49px;
+    top: -7px;
+  }
+  .box_photo-text {
+    z-index: 2;
+  }
+  .about_photo {
+    width: 124px;
+    top: -17px;
+    left: 79%;
+  }
+  .lng_opt-about_text {
+    width: 89%;
+    margin-left: 10px;
+    margin-top: 2px;
+    text-shadow: 3px 3px 4px black;
+    color: #ffdd5b;
+  }
+  .resp {
+    margin-top: 1px;
+  }
+  .box_pf,
+  .box_hb {
+    width: 72%;
+  }
+  .info_portf {
+    margin-top: -39px;
+  }
+  .arrow_box-cert {
+    height: 66%;
+    top: 53px;
+  }
+  .cert_slides {
+    margin-left: 3%;
+  }
+  .left-c {
+    left: -22px;
+  }
+  .right-c {
+    right: -28px;
+  }
+  .cert_img {
+    width: 140px;
+    z-index: 9;
+  }
+  .site_link {
+    width: 107%;
+  }
+  .site_img {
+    width: 139px;
+  }
+  .lng_opt-sites {
+    margin: 48px 0 19px 0;
+  }
+  .title_portf {
+    font-size: 29px;
+    left: 56%;
+    top: -4px;
+  }
+  .mob_hobby {
+    left: 195px;
+    font-size: 21px;
+    top: 7px;
+  }
+  .hobby_info {
+    margin-top: 43px;
+  }
+  .hobby_info-box {
+    z-index: 1;
+  }
+  .img-hobby {
+    width: 158px;
+    margin-left: 9%;
+  }
+  .hide_menu {
+    width: 128px;
+    top: 88px;
+    right: -107px;
+    font-size: 10px;
+    border-radius: 32%;
+  }
+  .interests {
+    left: 54px;
+    width: 218px;
+    font-size: 14px;
+    height: 223px;
+    line-height: 1.5;
+    padding: 5px;
+  }
+  .slider-box {
+    height: 125px;
+  }
+  .hobby_info-slider {
+    margin-left: -10px;
+  }
+}
+
+@media (max-width: 415px) {
+  .lang_box {
+    margin-left: -28px;
+  }
+  .card {
+    height: 559px;
+  }
+  .title {
+    margin-left: 0%;
+  }
+  .box_photo {
+    margin-left: -24%;
+    width: 73%;
+    margin-top: 27px;
+  }
+  .main_photo {
+    width: 136px;
+    left: 67%;
+  }
+  .lng_opt-info_text {
+    margin-left: 12%;
+    margin-top: 83px;
+  }
+  .main_back {
+    width: 96%;
+  }
+  .title_about {
+    font-size: 25px;
+    left: 156px;
+    top: 0px;
+    width: 42%;
+  }
+  .box_photo {
+    margin-top: 46px;
+  }
+  .about_photo {
+    width: 119px;
+    top: -37px;
+    left: 72%;
+  }
+  .lng_opt-about_descr {
+    text-shadow: 2px 2px 2px black;
+    color: #d8b120;
+  }
+  .lng_opt-about_text {
+    margin-top: 38px;
+  }
+  .social {
+    right: -49px;
+    height: 53%;
+    top: 23%;
+  }
+  .ss_link {
+    margin: 29px 0px 14px 0px;
+  }
+  .light,
+  .light_back,
+  .light_portfolio,
+  .light_hobby {
+    right: 25px;
+    top: 76px;
+    width: 247px;
+    height: 247px;
+  }
+  .title_portf {
+    font-size: 22px;
+    left: 58%;
+    top: 6px;
+  }
+  .lng_opt-cert {
+    z-index: 2;
+  }
+  .info_portf {
+    margin-top: -30px;
+  }
+  .box_pf,
+  .box_hb {
+    height: 559px;
+  }
+  .info_portf {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .cert_slides {
+    margin-left: 0%;
+    width: 100%;
+  }
+  .left-c {
+    left: 30px;
+  }
+  .right-c {
+    right: 30px;
+  }
+  .sites {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .site-slide {
+    margin-left: 0;
+  }
+  .arrow_box-site {
+    top: 24px;
+  }
+  .left-s {
+    left: -30px;
+    top: 46%;
+  }
+  .right-s {
+    right: -30px;
+    top: 46%;
+  }
+  .lng_opt-sites {
+    margin: 20px 0 13px 0;
+  }
+  .hobby_info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 9px;
+  }
+  .mob_hobby {
+    font-size: 15px;
+    left: 54%;
+    top: 16px;
+  }
+  .hobby_info-box {
+    width: 100%;
+  }
+  .img-hobby {
+    width: 185px;
+    margin-left: 19%;
+  }
+  .hide_menu {
+    width: 121px;
+    top: 1px;
+    right: 86px;
+    border-radius: 16%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .interests {
+    left: 29px;
+    top: -265px;
+  }
+  .arrow_b::before {
+    width: 7px;
+    height: 7px;
+  }
+  .hobby_info-slider {
+    margin-top: 38px;
+    margin-left: -12px;
+    width: 50%;
+  }
+  .left,
+  .right {
+    opacity: 0.7;
+    top: 37%;
+  }
+  .arrow::before {
+    border: 2px solid black;
+  }
+  .arrow--left::before {
+    left: -8px;
+    border-right: 0;
+    border-top: 0;
+  }
+  .arrow--right::before {
+    right: -8px;
+    border-left: 1px;
+    border-bottom: 1px;
+  }
+  .slider-box {
+    height: 136px;
+  }
+}
+
+@media (max-width: 376px) {
+  .title {
+    z-index: 2;
+    text-shadow: 1px 2px 1px black;
+  }
+  .box_menu {
+    left: 40px;
+  }
+  .main_photo {
+    width: 135px;
+    left: 64%;
+  }
+  .lng_opt-info_text {
+    margin-left: 5%;
+  }
+  .social {
+    right: -42px;
+  }
+  .lang_box {
+    margin-left: -32px;
+  }
+  .title_about {
+    left: 151px;
+  }
+  .light,
+  .light_back,
+  .light_portfolio,
+  .light_hobby {
+    right: 12px;
+  }
+  .right-s {
+    top: 45%;
+  }
+  .left-s {
+    top: 46%;
+  }
+  .img-hobby {
+    margin-left: 15%;
+  }
+  .hb_dsgn {
+    width: 100px;
+  }
+  .mob_hobby {
+    font-size: 14px;
+    left: 52%;
+    top: 17px;
+  }
+  .hide_menu {
+    top: 203px;
+    right: 73px;
+  }
+  .interests {
+    left: 16px;
+    top: -87px;
+  }
+  .label {
+    top: 544px;
+    right: 74px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 320px) {
+  .lang_box {
+    margin-left: -40px;
+  }
+  .card {
+    height: 461px;
+  }
+  .box_menu,
+  .main_back {
+    font-size: 10px;
+  }
+  .naw_dsgn {
+    width: 95px;
+    height: 30px;
+  }
+  .main_photo {
+    width: 116px;
+  }
+  .box_photo {
+    margin-top: 13px;
+  }
+  .lng_opt-info_text {
+    margin-left: 4%;
+    margin-top: 30px;
+    width: 93%;
+    font-size: 13px;
+  }
+  .social {
+    right: -34px;
+  }
+  .ss_link {
+    margin: 30px 0px 12px 0px;
+  }
+  .about_photo {
+    width: 106px;
+    top: -37px;
+    left: 68%;
+  }
+  .lng_opt-about_text {
+    margin-top: 7px;
+    margin-left: 1px;
+    font-size: 10px;
+  }
+  .title_about {
+    font-size: 21px;
+    left: 125px;
+    top: 5px;
+  }
+  .resp_320 {
+    font-size: 17px;
+    margin-top: 22px;
+  }
+  .box_pf,
+  .box_hb {
+    height: 461px;
+  }
+  .title_portf {
+    font-size: 14px;
+    left: 57%;
+    top: 16px;
+  }
+  .lng_opt-cert {
+    font-size: 12px;
+  }
+  .right-c {
+    top: 30%;
+    right: 15px;
+  }
+  .left-c {
+    top: 31%;
+    left: 14px;
+  }
+  .cert_img {
+    width: 103px;
+  }
+  .light,
+  .light_back,
+  .light_portfolio,
+  .light_hobby {
+    right: 17px;
+    width: 199px;
+    height: 199px;
+    top: 107px;
+  }
+  .site_link {
+    width: 114%;
+  }
+  .lng_opt-sites {
+    font-size: 13px;
+    margin: 20px 0 8px 0;
+  }
+  .left-s {
+    left: -32px;
+  }
+  .right-s {
+    right: -36px;
+  }
+  .hobby_info {
+    margin-top: -4px;
+  }
+  .img-hobby {
+    margin-left: 17%;
+    width: 142px;
+  }
+  .hide_menu {
+    right: 57px;
+    top: 143px;
+  }
+  .interests {
+    left: -4px;
+    top: -103px;
+  }
+  .label {
+    top: 447px;
+    right: 56px;
+  }
+  .box_hobby {
+    -webkit-box-shadow: 0px 18px 18px -12px #ac8b10;
+            box-shadow: 0px 18px 18px -12px #ac8b10;
+  }
+  .mob_hobby {
+    font-size: 11px;
+    left: 57%;
+    top: 21px;
+  }
+  .hobby_info-slider {
+    margin-left: -24px;
+    width: 61%;
+  }
+  .popup_tech-info,
+  .popup_contact-info {
+    width: 250px;
+    height: 364px;
+  }
+  .tech-text {
+    font-size: 16px;
+  }
+  .lng_opt-stack {
+    font-size: 18px;
+  }
+  .popup_contact-info {
+    font-size: 19px;
+  }
+  .light_popup {
+    left: 38%;
+    top: 18px;
   }
 }
 /*# sourceMappingURL=style.css.map */
